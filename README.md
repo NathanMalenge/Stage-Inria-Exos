@@ -1,6 +1,6 @@
 # Stage Inria - Exercices Pharo
 
-Ce dépôt contient mes travaux pratiques réalisés dans le cadre de ma candidature pour un stage à l'Inria (Équipe EVREF / Spirals).
+Ce dépôt contient mes travaux pratiques réalisés dans le cadre de ma candidature pour un stage à l'Inria (Équipe EVREF).
 
 ## Évolution de l'implémentation (LList)
 
