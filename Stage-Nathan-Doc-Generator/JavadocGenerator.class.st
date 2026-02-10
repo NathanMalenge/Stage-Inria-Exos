@@ -1,9 +1,5 @@
 "
-Voici une documentation complète et professionnelle pour ta classe JavadocGenerator. Elle explique non seulement ce que fait la classe, mais aussi la technique utilisée (l'introspection), ce qui est un gros point positif pour ton stage.
-
-Copie ce texte dans l'onglet Comment de ta classe JavadocGenerator :
-
-    ""I am a documentation generator inspired by Javadoc, created for the Inria internship technical test.
+""I am a documentation generator inspired by Javadoc, created for the Inria internship technical test.
 
     My purpose is to take a Pharo class as input and generate a clean HTML file containing its metadata and its behavior. I demonstrate the power of Pharo's introspection (meta-programming).
 
@@ -35,9 +31,9 @@ JavadocGenerator >> generateFor: aClass [
 		stream nextPutAll: '<h2>Liste des méthodes :</h2>'.
         stream nextPutAll: '<ul>'.
         
-        aClass selectors do: [ :unSelecteur | 
+        aClass selectors do: [ :uneMethode | 
             stream nextPutAll: '<li>'.
-            stream nextPutAll: unSelecteur asString.
+            stream nextPutAll: uneMethode asString.
             stream nextPutAll: '</li>' ].
             
         stream nextPutAll: '</ul>'.
