@@ -24,6 +24,11 @@ ALNode >> at: anIndex [
     ^ self subclassResponsibility
 ]
 
+{ #category : 'removing' }
+ALNode >> remove: anObject [
+    ^ self subclassResponsibility
+]
+
 { #category : 'accessing' }
 ALNode >> size [
     ^ self subclassResponsibility
