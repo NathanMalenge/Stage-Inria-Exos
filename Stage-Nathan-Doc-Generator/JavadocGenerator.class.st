@@ -1,4 +1,3 @@
-"
 ""I am a documentation generator inspired by Javadoc, created for the Inria internship technical test.
 
     My purpose is to take a Pharo class as input and generate a clean HTML file containing its metadata and its behavior. I demonstrate the power of Pharo's introspection (meta-programming).
