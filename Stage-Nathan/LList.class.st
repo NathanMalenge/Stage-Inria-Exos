@@ -32,18 +32,7 @@ Class {
 LList >> add: aValue [
 	"adds a new Node composed of aValue at the end of this list"
 
-	|node current|
-	node := LNode new value: aValue.
-	
-	head ifNil: [ head := node.
-        ^ self ].
-	
-	current := head.
-	
-	[current next isNotNil] whileTrue: [ current := current next ].
-	
-	current next: node.
-	^self.
+	head:= head add:aValue.
 	
 	
 ]
@@ -62,20 +51,7 @@ LList >> addFirst: aValue [
 { #category : 'accessing' }
 LList >> at: anIndex [
     "return the element at the index anIndex"
-    | count current |
-    
-    anIndex < 1 ifTrue: [ ^ self error: 'Index too small' ].
-    
-    count := 1.
-    current := head.
-    
-    [ current isNotNil and: [ count < anIndex ] ] whileTrue: [ 
-        count := count + 1. 
-        current := current next ].
-    
-    ^ current 
-        ifNil: [ self error: 'Index out of bounds' ] 
-        ifNotNil: [ current value ]
+    ^ head at:anIndex.
 ]
 
 { #category : 'accessing' }
@@ -91,31 +67,22 @@ LList >> head: anObject [
 	head := anObject
 ]
 
+{ #category : 'initialization' }
+LList >> initialize [
+    super initialize. "Toujours appeler le parent par réflexe"
+    head := LEmpty new.
+]
+
 { #category : 'accessing' }
 LList >> remove: anElement [
     "remove the element if it exists in the list, else raise error"
-    | current |    
-		head ifNil: [ ^ self error: 'The list is empty' ].
-	 head value = anElement ifTrue: [ head := head next. ^self ].
-    current := head.
-	[ current next isNotNil and:[current next value ~= anElement ]] whileTrue: [ 
-				current := current next ].
-	
-	current next ifNil: [ ^self error: 'The list does not contain this element' ].
-	current next: current next next.
+    head:= head remove:anElement.
     
 ]
 
 { #category : 'accessing' }
 LList >> size [
 	"gets the size of this list"
-
-	|count current|
-	count := 0.
-	current := head.
-	
-	[current isNotNil ] whileTrue: [ count := count +1. current := current next ].
-	
-	^count.
+	^head size.
 
 ]

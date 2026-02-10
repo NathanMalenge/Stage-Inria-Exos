@@ -12,7 +12,7 @@ Example:
 "
 Class {
 	#name : 'LNode',
-	#superclass : 'Object',
+	#superclass : 'ALNode',
 	#instVars : [
 		'value',
 		'next'
@@ -20,6 +20,19 @@ Class {
 	#category : 'Stage-Nathan',
 	#package : 'Stage-Nathan'
 }
+
+{ #category : 'adding' }
+LNode >> add: anObject [
+    "Je délègue au suivant et je me retourne moi-même"
+    next := next add: anObject.
+    ^ self
+]
+
+{ #category : 'accessing' }
+LNode >> at: anIndex [
+    anIndex = 1 ifTrue: [ ^ value ].
+    ^ next at: anIndex - 1
+]
 
 { #category : 'accessing' }
 LNode >> next [
@@ -33,6 +46,18 @@ LNode >> next: anObject [
 	"sets the next node of this to anObject"
 
 	next := anObject
+]
+
+{ #category : 'accessing' }
+LNode >> remove: anObject [
+    value = anObject ifTrue: [ ^ next ].
+    next := next remove: anObject.
+    ^ self
+]
+
+{ #category : 'accessing' }
+LNode >> size [
+    ^ 1 + next size
 ]
 
 { #category : 'evaluating' }
