@@ -2,7 +2,7 @@
 
 Ce dépôt contient mes travaux pratiques réalisés dans le cadre de ma candidature pour un stage à l'Inria (Équipe EVREF / Spirals).
 
-## 🚀 Évolution de l'implémentation (LList)
+## Évolution de l'implémentation (LList)
 
 Au début de l'exercice sur la Liste Chaînée (**LList**), j'avais opté pour une approche "naïve" avec beaucoup de structures de contrôle :
 * Utilisation de `ifTrue:ifFalse:` pour gérer les cas `nil`.
@@ -17,7 +17,7 @@ Pour supprimer les tests de nullité et les boucles, j'ai refactorisé le code a
 * `LListNode` : Nœud contenant une donnée (`value`) et le suivant (`next`).
 * `LListEmpty` : Un **Null Object** qui représente la fin de liste et gère les cas d'arrêt.
 
-## ⚙️ Installation
+## Installation
 1. Cloner le dépôt.
 2. Importer le package via **Iceberg** dans Pharo.
 3. Exécuter les tests unitaires dans le **Test Runner**.
