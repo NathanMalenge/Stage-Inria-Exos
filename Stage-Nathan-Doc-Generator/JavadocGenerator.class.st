@@ -1,8 +1,8 @@
-""I am a documentation generator inspired by Javadoc, created for the Inria internship technical test.
+"I am a documentation generator inspired by Javadoc, created for the Inria internship technical test.
 
-    My purpose is to take a Pharo class as input and generate a clean HTML file containing its metadata and its behavior. I demonstrate the power of Pharo's introspection (meta-programming).
+    My purpose is to take a Pharo class as input and generate a clean HTML file containing its metadata and its behavior. 
 
-    How I work: Instead of parsing source code files, I directly query the Class object to extract its name, its class comment, and the list of its method selectors.
+    How I work: I  query the Class object to extract its name, its class comment, and the list of its method selectors.
 
     Public Interface: - #generateFor: aClass : The main entry point. It takes a Class (e.g., LList), extracts its information, and writes a file named '<ClassName>.html' in the local directory.
 
