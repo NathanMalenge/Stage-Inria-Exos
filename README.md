@@ -1,6 +1,7 @@
 # Stage Inria - Exercices Pharo
 
-Ce dépôt contient mes travaux pratiques réalisés dans le cadre de ma candidature pour un stage à l'Inria (Équipe EVREF).
+Ce dépôt contient mes travaux pratiques ayant pour but de m'initier aux bases de pharo.
+Ils ont été réalisés dans le cadre de ma candidature pour un stage à l'Inria.
 
 ## Évolution de l'implémentation de la LList
 
